@@ -329,6 +329,85 @@ h1 {
 
 .important-box strong { color: var(--rose-800); }
 
+.pair-booking-card {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+  gap: 15px;
+  align-items: center;
+  margin-top: 15px;
+  padding: 20px 22px;
+  border: 1px solid rgba(179, 78, 112, .2);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff 0%, var(--rose-100) 100%);
+  box-shadow: 0 9px 24px rgba(125, 52, 79, .07);
+}
+
+.pair-booking-mark {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose-700), var(--rose-500));
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 24px;
+  box-shadow: 0 7px 16px rgba(179, 78, 112, .2);
+}
+
+.pair-booking-copy h3 {
+  margin: 0;
+  color: var(--rose-800);
+  font-family: var(--serif);
+  font-size: 16px;
+}
+
+.pair-booking-copy p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.pair-booking-button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 17px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--rose-700), var(--rose-500));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(179, 78, 112, .2);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.pair-booking-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(179, 78, 112, .26);
+}
+
+.pair-booking-button:focus-visible {
+  outline: 3px solid rgba(216, 117, 152, .28);
+  outline-offset: 3px;
+}
+
+.pair-booking-button span {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.pair-booking-button-inline { margin-top: 14px; }
+
 .booking-notes {
   margin: 0;
   padding: 24px 29px 24px 52px;
@@ -587,6 +666,9 @@ h1 {
   .note-list { padding: 14px 20px 17px 36px; }
   .method-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .method-step { min-height: 137px; padding: 17px 14px 15px; }
+  .pair-booking-card { grid-template-columns: 44px minmax(0, 1fr); gap: 12px; padding: 18px 16px; }
+  .pair-booking-button { grid-column: 1 / -1; width: 100%; }
+  .pair-booking-button-inline { display: flex; width: 100%; }
   .booking-notes { padding: 18px 18px 19px 43px; }
   .booking-notes li { font-size: 12px; line-height: 1.8; }
   .faq-item summary { grid-template-columns: 31px minmax(0, 1fr) 18px; gap: 9px; padding: 12px 12px; font-size: 12px; }
