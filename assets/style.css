@@ -274,7 +274,7 @@ h1 {
 
 .method-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 11px;
 }
 
@@ -314,6 +314,37 @@ h1 {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.75;
+}
+
+.method-step-action {
+  display: flex;
+  flex-direction: column;
+}
+
+.guide-button-preview {
+  display: flex;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 10px 12px;
+  border-radius: 13px;
+  background: #c96884;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  user-select: none;
+  box-shadow: 0 7px 16px rgba(179, 78, 112, .16);
+}
+
+.method-step-action p + .guide-button-preview { margin-top: 15px; }
+
+.guide-button-preview-send {
+  width: min(100%, 180px);
+  align-self: center;
 }
 
 .important-box {
@@ -650,6 +681,10 @@ h1 {
 .portal-link span { color: var(--gold); font-family: Georgia, serif; font-size: 11px; letter-spacing: .2em; }
 .portal-link strong { display: block; margin-top: 4px; font-family: var(--serif); font-size: 19px; }
 .portal-link p { margin: 6px 0 0; color: var(--muted); font-size: 12px; }
+
+@media (max-width: 900px) {
+  .method-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 @media (max-width: 720px) {
   body { font-size: 15px; }
